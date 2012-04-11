@@ -3,10 +3,35 @@
 <title> Examination </title>
 </head>
 <body >
+<div id="quesDiv">
+<label id="quesTxt">Ques </label>
+<div id="optDiv">
+<input type="radio" name ="rad" class="radioBut"/>
+<label></label></br>
+
+<input type="radio" name ="rad" class="radioBut"/>
+<label></label></br>
+
+<input type="radio" name ="rad" class="radioBut"/>
+<label></label></br>
+
+<input type="radio" name ="rad" class="radioBut"/>
+<label></label></br>
+
+</div>
+<input type="button" id="proceedBtn" value="Proceed"/>
+</div>
 <script src="ExamFinal.js"></script>
 <script type="text/javascript">
-var quesArr =Quiz.loadQuiz();
-Quiz.startQuiz();
+var json_obj = [
+{"ques" :"Expand HTML" , "options":["HyperTrimMarkUpLang", "HiTextMarkUpLanguage", "HyperTextMarkUpLanguage", "HyperTextMarkUpLang"], "ans":2},
+{"ques" :"Expand XML" , "options":["HyperTrimMarkUpLang", "HiTextMarkUpLanguage", "ExtensibleMarkUpLanguage", "HyperTextMarkUpLang"], "ans":2},
+{"ques" :"Expand TCP" , "options":["No idea", "Transmission control protocol", "ExtensibleMarkUpLanguage", "HyperTextMarkUpLang"], "ans":1},
+{"ques" :"Expand FTP" , "options":["No idea", "Transmission control protocol", "File transmission Protocol", "HyperTextMarkUpLang"], "ans":2},
+{"ques" :"Expand UDP" , "options":["User Datagram Protocol", "Transmission control protocol", "File transmission Protocol", "HyperTextMarkUpLang"], "ans":0}];
+
+var myQuiz = new Quiz(json_obj);
+myQuiz.showQues();
 </script>
 </body>
 
